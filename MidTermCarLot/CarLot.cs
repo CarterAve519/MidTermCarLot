@@ -24,7 +24,7 @@ namespace MidTermCarLot
 
         }
 
-
+        //Allowing the user to create a car
         public static Car CreateCar(List<Car> CarList)
         {
             Console.WriteLine("Is this a New or Used Car?");
@@ -47,6 +47,7 @@ namespace MidTermCarLot
                 Console.WriteLine("What is the mileage?");
 
                 double mileage = Convert.ToDouble(Console.ReadLine());
+
 
                 Car usedCar = (new UsedCar(make, model, year, price, mileage));
 

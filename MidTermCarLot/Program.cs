@@ -38,22 +38,33 @@ namespace MidTermCarLot
 
             while (true)
             {
+
                 //display list of options
                 ShowMenu();
                 string input = Console.ReadLine();
-                if (input == "1")
+                int number = 0;
+                //!TrtParse returns bool, if false;
+                while(!int.TryParse(input, out number)||number < 1 || number > 6)
+                {
+                    Console.WriteLine("This is not valid input. Please enter 1-6.");
+                    input = Console.ReadLine();
+                }
+
+                if (number == 1)
                 {
                     //display list of cars
                     CarLot.DisplayList(CarList);
+
+
                 }
                 //what conditions need to be met
-                else if (input == "2")
+                else if (number == 2)
                 {
                     //create a new car and add it to the list
                     CarList.Add(CarLot.CreateCar(CarList));
 
                 }
-                else if (input == "3")
+                else if (number == 3)
                 {
                     CarLot.DisplayList(CarList);
                     Console.WriteLine("Which car would you like to remove?");
@@ -61,7 +72,7 @@ namespace MidTermCarLot
                     index = Convert.ToInt32(Console.ReadLine());
                     CarLot.Remove(CarList, index - 1);
                 }
-                else if (input == "4")
+                else if (number == 4)
                 {
                     CarLot.DisplayList(CarList);
                     Console.WriteLine("Which car would you like to know more information about?");
@@ -70,8 +81,9 @@ namespace MidTermCarLot
                     Console.WriteLine(CarList[index - 1].ToString());
 
                 }
-                else if (input == "5")
+                else if (number == 5)
                 {
+
                     CarLot.DisplayList(CarList);
                     Console.WriteLine("Which car would you like to replace?");
                     //replace a car based on user input.
@@ -81,6 +93,12 @@ namespace MidTermCarLot
                     CarList.Insert(index - 1, CarLot.CreateCar(CarList));
                     
                 }
+                else if (number == 6)
+                {
+                    Console.WriteLine("GoodBye!");
+                    return;
+                }
+            
 
             }
 
@@ -88,7 +106,7 @@ namespace MidTermCarLot
 
         static void ShowMenu()
         {
-            Console.WriteLine("1. List all cars.\n2. Add a car.\n3. Remove a car.\n4. Look up a car in a given position\n5. Replace a car in a given position\n");
+            Console.WriteLine("1. List all cars.\n2. Add a car.\n3. Remove a car.\n4. Look up a car in a given position\n5. Replace a car in a given position\n6. Quit\n");
 
             Console.WriteLine("What do you want to do?");
         }

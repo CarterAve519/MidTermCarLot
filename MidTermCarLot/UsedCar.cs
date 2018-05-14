@@ -18,6 +18,7 @@ namespace MidTermCarLot
             this.Mileage = Mileage;
         }
 
+        
         public override string ToString()
         {
             return base.ToString() + $"{Mileage, 10}";
