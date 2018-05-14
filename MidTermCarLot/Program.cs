@@ -11,6 +11,7 @@ namespace MidTermCarLot
     {
         static void Main(string[] args)
         {
+
             
 
            
@@ -28,9 +29,9 @@ namespace MidTermCarLot
             CarList.Add(new UsedCar("Hyonda", "Prior", 2015, 14795.50, 35987.6));
             CarList.Add(new UsedCar("GC", "Chirpus", 2013, 8500.00, 12345.0));
             CarList.Add(new UsedCar("GC", "Witherell", 2016, 14450.00, 3500.3));
+                    
 
-       
-          
+             
 
             
             
