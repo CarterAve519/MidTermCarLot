@@ -5,3 +5,10 @@ C:\Users\jaide\source\repos\MidTermCarLot\MidTermCarLot\bin\Debug\MidTermCarLot.
 C:\Users\jaide\source\repos\MidTermCarLot\MidTermCarLot\bin\Debug\MidTermCarLot.pdb
 C:\Users\jaide\source\repos\MidTermCarLot\MidTermCarLot\obj\Debug\MidTermCarLot.exe
 C:\Users\jaide\source\repos\MidTermCarLot\MidTermCarLot\obj\Debug\MidTermCarLot.pdb
+C:\Users\CARTE\source\repos\MidTermCarLot\MidTermCarLot\bin\Debug\MidTermCarLot.exe.config
+C:\Users\CARTE\source\repos\MidTermCarLot\MidTermCarLot\bin\Debug\MidTermCarLot.exe
+C:\Users\CARTE\source\repos\MidTermCarLot\MidTermCarLot\bin\Debug\MidTermCarLot.pdb
+C:\Users\CARTE\source\repos\MidTermCarLot\MidTermCarLot\obj\Debug\MidTermCarLot.csprojResolveAssemblyReference.cache
+C:\Users\CARTE\source\repos\MidTermCarLot\MidTermCarLot\obj\Debug\MidTermCarLot.csproj.CoreCompileInputs.cache
+C:\Users\CARTE\source\repos\MidTermCarLot\MidTermCarLot\obj\Debug\MidTermCarLot.exe
+C:\Users\CARTE\source\repos\MidTermCarLot\MidTermCarLot\obj\Debug\MidTermCarLot.pdb

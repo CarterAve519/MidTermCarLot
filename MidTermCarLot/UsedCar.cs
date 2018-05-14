@@ -12,6 +12,7 @@ namespace MidTermCarLot
 
         public double Mileage { get => mileage; set => mileage = value; }
 
+        //Constructor
         public UsedCar(string Make, string Model, int Year, double Price, double Mileage): base(Make, Model, Year, Price)
         {
             this.Mileage = Mileage;
@@ -19,7 +20,11 @@ namespace MidTermCarLot
 
         public override string ToString()
         {
-            return base.ToString();
+            return base.ToString() + $"{Mileage, 10}";
         }
+
+
+
+        
     }
 }

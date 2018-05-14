@@ -39,9 +39,5 @@ namespace MidTermCarLot
             return String.Format("{0,10} {1,15} {2,20} {3,25}", make, model, year, price);
         }
 
-
-
-
-
     }
 }
