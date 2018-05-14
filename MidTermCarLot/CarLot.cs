@@ -25,7 +25,7 @@ namespace MidTermCarLot
         }
 
 
-        public static void CreateCar(List<Car> CarList)
+        public static Car CreateCar(List<Car> CarList)
         {
             Console.WriteLine("Is this a New or Used Car?");
             string input = Console.ReadLine();
@@ -48,17 +48,20 @@ namespace MidTermCarLot
 
                 double mileage = Convert.ToDouble(Console.ReadLine());
 
-                CarList.Add(new UsedCar(make, model, year, price, mileage));
+                Car usedCar = (new UsedCar(make, model, year, price, mileage));
+
+                return usedCar;
             }
             else
             {
-                CarList.Add(new Car(make, model, year, price));
+                Car usedCar = (new Car(make, model, year, price));
+                return usedCar;
             }
-                
 
-            
-          
-            
+
+
+
+
         }
 
         public static void Remove(List<Car>CarList, int index)
@@ -66,7 +69,6 @@ namespace MidTermCarLot
 
             CarList.RemoveAt(index);
         }
-
-
+        
     }
 }

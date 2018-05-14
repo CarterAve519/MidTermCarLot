@@ -11,10 +11,11 @@ namespace MidTermCarLot
     {
         static void Main(string[] args)
         {
+            int index = 0;
 
-            
 
-           
+
+
             {
 
                 Console.WriteLine("Welcome to the Grand Circus Motors");
@@ -23,18 +24,18 @@ namespace MidTermCarLot
             }
             List<Car> CarList = new List<Car>();
 
-            CarList.Add(new Car("Nikolai","Model S", 2017, 54999.90));
+            CarList.Add(new Car("Nikolai", "Model S", 2017, 54999.90));
             CarList.Add(new Car("Fourd", "Escapade", 2017, 31999.00));
             CarList.Add(new Car("Chewie", "Vette", 2017, 44989.95));
             CarList.Add(new UsedCar("Hyonda", "Prior", 2015, 14795.50, 35987.6));
             CarList.Add(new UsedCar("GC", "Chirpus", 2013, 8500.00, 12345.0));
             CarList.Add(new UsedCar("GC", "Witherell", 2016, 14450.00, 3500.3));
-                    
 
-             
 
-            
-            
+
+
+
+
             while (true)
             {
                 //display list of options
@@ -49,29 +50,38 @@ namespace MidTermCarLot
                 else if (input == "2")
                 {
                     //create a new car and add it to the list
-                    CarLot.CreateCar(CarList);
-                    
+                    CarList.Add(CarLot.CreateCar(CarList));
+
                 }
                 else if (input == "3")
                 {
                     CarLot.DisplayList(CarList);
                     Console.WriteLine("Which car would you like to remove?");
                     //delete a car based on user input
-                    int index = Convert.ToInt32(Console.ReadLine());
+                    index = Convert.ToInt32(Console.ReadLine());
                     CarLot.Remove(CarList, index - 1);
-
-
-
                 }
                 else if (input == "4")
                 {
+                    CarLot.DisplayList(CarList);
+                    Console.WriteLine("Which car would you like to know more information about?");
+                    //output car information based on user input.
+                    index = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(CarList[index - 1].ToString());
 
                 }
                 else if (input == "5")
                 {
-
+                    CarLot.DisplayList(CarList);
+                    Console.WriteLine("Which car would you like to replace?");
+                    //replace a car based on user input.
+                    index = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(CarList[index - 1].ToString());
+                    CarList.RemoveAt(index - 1);
+                    CarList.Insert(index - 1, CarLot.CreateCar(CarList));
+                    
                 }
-                
+
             }
 
         }
