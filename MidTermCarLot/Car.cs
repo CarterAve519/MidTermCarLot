@@ -34,6 +34,10 @@ namespace MidTermCarLot
             this.Price = Price;
         }
 
+        public override string ToString()
+        {
+            return String.Format("{0,10} {1,15} {2,20} {3,25}", make, model, year, price);
+        }
 
 
 
