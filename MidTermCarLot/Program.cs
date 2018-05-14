@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace MidTermCarLot
     {
         static void Main(string[] args)
         {
+
             //Welcome statement
             Console.WriteLine("Welcome to the Grand Circus Motors admin console!");
 
@@ -48,6 +50,18 @@ namespace MidTermCarLot
             {
                 Console.WriteLine(cars[i].ToString());
             }
+
+
+            ArrayList ListOfCars = new ArrayList();
+            {
+
+            }
+
+            Console.WriteLine("Welcome to the Grand Circus Motors");
+            Console.WriteLine( );
+
+            
+
         }
     }
 }
