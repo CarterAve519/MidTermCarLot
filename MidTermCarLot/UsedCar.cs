@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace MidTermCarLot
 {
-    class UsedCar
+    class UsedCar: Car
     {
+        private double mileage;
+
+        public double Mileage { get => mileage; set => mileage = value; }
+
+        public UsedCar(string Make, string Model, int Year, double Price, double Mileage): base(Make, Model, Year, Price)
+        {
+            this.Mileage = Mileage;
+        }
     }
 }
